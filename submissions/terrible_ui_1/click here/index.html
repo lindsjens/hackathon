@@ -31,24 +31,88 @@
 
 <body onload="generateRandomTabIndex()">
 
+    <h1>Are we having fun yet?</h1>
     <div id="checkBoxDiv">
         <input type="checkbox" tabindex="1">
     </div>
     
-    <h1>Are we having fun yet?</h1>
     <form>
         <h3>Date</h3>
-        <div id="dateDiv" onmouseover="timeToMoveRight('dateDiv')" onmouseout="timeToMoveLeft('dateDiv')" style="width: 100px; height: 100px;">
-            <input tabindex="4" type="date">
+        <div id="dateDiv" >
+            <!--<input tabindex="4" type="date">-->
         </div>
+
+        <div id="monthDiv" onmouseover="timeToMoveSomewhere('monthDiv')" onmouseout="timeToMoveSomewhere('monthDiv')" style="width: 100px; height: 1px;">
+            <select id="monthSelectId" >
+                <option value="January">January</option>
+                <option value="February">February</option>
+                <option value="March">March</option>
+                <option value="April">April</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="August">August</option>
+                <option value="September">September</option>
+                <option value="October">October</option>
+                <option value="November">November</option>
+                <option value="December">December</option>
+            </select>
+        </div>
+        <br />
+
+        <br />
+            <div id="dayDiv" onmouseover="timeToMoveSomewhere('dayDiv')" onmouseout="timeToMoveSomewhere('dayDiv')">
+                <select id="day" >
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="07">07</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                </select>
+            </div>
+
+        <br />
+        <div id="yearDiv" onmouseover="timeToMoveSomewhere('yearDiv')" onmouseout="timeToMoveSomewhere('yearDiv')">
+            <input id="yearId" placeholder="2022" size="4">
+        </div>
+        
+
         <h4>Time</h4>
-        <div id="timeDiv" onmouseover="timeToMoveRight('timeDiv')" onmouseout="timeToMoveLeft('timeDiv')" style="width: 100px;">
+        <div id="timeDiv" onmouseover="timeToMoveSomewhere('timeDiv')" onmouseout="timeToMoveSomewhere('timeDiv')" style="width: 100px; height: 1px;">
             <input tabindex="3" type="time">
         </div>
         <br>
         <br>
-        
-        <div id="submitDiv" onmouseover="timeToMoveRight('submitDiv')" onmouseout="timeToMoveLeft('submitDiv')" style="width: 100px;">
+
+        <h1>Have fun reverse tabbing to find the Submit button! (Shift + Tab)</h1>
+
+        <div id="submitDiv" onmouseover="timeToMoveSomewhere('submitDiv')" onmouseout="timeToMoveSomewhere('submitDiv')" style="width: 100px; height: 1px;">
             <button tabindex="2" id="submit" type="submit">Submit</button>
         </div>
     </form>
@@ -58,16 +122,28 @@
 
 <script>
     function timeToMoveRight(idOfElementToMove){
-        console.log(1)
         document.getElementById(idOfElementToMove).style.padding = "0px 0px 0px 1200px";
     }
     function timeToMoveLeft(idOfElementToMove){
         document.getElementById(idOfElementToMove).style.padding = "0px 1400px 0px 0px";
     }
 
+    function timeToMoveSomewhere(idOfElementToMove){
+        let number = Math.floor(Math.random() * 11);
+        let modOfNumber = number % 3;
+
+        if(modOfNumber == "2"){
+            document.getElementById(idOfElementToMove).style.padding = "1400px 0px 0px 0px";
+        } else if(modOfNumber == "1"){
+            document.getElementById(idOfElementToMove).style.padding = "0px 0px 1400px 0px";
+        } else {
+            document.getElementById(idOfElementToMove).style.padding = "0px 0px 0px 1400px";
+        }
+    }
+
     function generateRandomTabIndex(){
-        let tabIndexArray = ["1", "2", "3", "4"];
-        let divArrayIdValues = ['checkBoxDiv', 'dateDiv', 'timeDiv', 'submitDiv'];
+        let tabIndexArray = ["1", "2", "3", "4", "5", "6", "7"];
+        let divArrayIdValues = ['checkBoxDiv', 'dateDiv', 'timeDiv', 'submitDiv', 'monthDiv', 'dayDiv', 'yearDiv'];
 
         shuffleArray(tabIndexArray);
 
