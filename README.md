@@ -17,4 +17,5 @@ The tabs are unordered.
 
 I do my best design work in paint. Thanks for the arrows. MS Paint always out here doing us solids. 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/kipiocZvZoA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+ 
+[![Here is a video I made showing it off.](https://www.youtube.com/embed/kipiocZvZoA)](https://www.youtube.com/embed/kipiocZvZoA)
