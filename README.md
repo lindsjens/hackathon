@@ -16,6 +16,7 @@ Your best bet, if you actually want to enter a day/time, is to click here (and t
 The tabs are unordered.
 
 I do my best design work in paint. Thanks for the arrows. MS Paint always out here doing us solids. 
+Please watch the following video I made showing off the site:
 
  
 [![Here is a video I made showing it off.](https://i.imgur.com/uctbLEG.jpg)](https://www.youtube.com/embed/kipiocZvZoA)
