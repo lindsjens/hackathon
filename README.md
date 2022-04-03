@@ -18,4 +18,4 @@ The tabs are unordered.
 I do my best design work in paint. Thanks for the arrows. MS Paint always out here doing us solids. 
 
  
-[![Here is a video I made showing it off.](https://www.youtube.com/embed/kipiocZvZoA)](https://www.youtube.com/embed/kipiocZvZoA)
+[![Here is a video I made showing it off.](https://www.youtube.com/embed/kipiocZvZoA)]
